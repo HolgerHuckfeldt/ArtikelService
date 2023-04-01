@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SqlQueries\Article\GetCsoFuerArtikelsuche.sql" />
+    <None Remove="SqlQueries\Article\GetPvBasicsArtikelIds.sql" />
+    <None Remove="SqlQueries\Article\GetPvBasicsListArtikelIds.sql" />
+    <None Remove="SqlQueries\Article\GetTemotSearchNodes.sql" />
+    <None Remove="SqlQueries\Article\GetTemotStrip.sql" />
+    <None Remove="SqlQueries\Article\GetVerwandteArtikel.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SqlQueries\Article\GetCsoFuerArtikelsuche.sql" />
+    <EmbeddedResource Include="SqlQueries\Article\GetPvBasicsArtikelIds.sql" />
+    <EmbeddedResource Include="SqlQueries\Article\GetPvBasicsListArtikelIds.sql" />
+    <EmbeddedResource Include="SqlQueries\Article\GetTemotSearchNodes.sql" />
+    <EmbeddedResource Include="SqlQueries\Article\GetTemotStrip.sql" />
+    <EmbeddedResource Include="SqlQueries\Article\GetVerwandteArtikel.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Absolute.SolrClient0900\Absolute.SolrClient0900.csproj" />
+  </ItemGroup>
+
+</Project>
